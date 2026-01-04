@@ -5,7 +5,11 @@ description = "CS 336 Assignment 3: Scaling Laws"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "ipykernel>=7.1.0",
+    "matplotlib>=3.10.8",
+    "polars>=1.36.1",
     "requests>=2.32.3",
+    "scipy>=1.16.3",
     "torch>=2.7.0",
 ]
 
