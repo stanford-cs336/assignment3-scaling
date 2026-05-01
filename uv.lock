@@ -404,7 +404,7 @@ wheels = [
 
 [[package]]
 name = "cs336-scaling"
-version = "26.0.0"
+version = "26.0.1"
 source = { editable = "." }
 dependencies = [
     { name = "chex" },

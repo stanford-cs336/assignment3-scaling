@@ -2,10 +2,14 @@
 
 All changes we make to the assignment code or PDF will be documented in this file.
 
+## [26.0.1] - 2026-05-01
+
+- writeup: add AI policy
+- code: add AGENTS.md and CLAUDE.md
+
 ## [26.0.0] - 2026-04-29
 
-- handout: change writeup from offline to online model training api
-- code: add 3
+- change from offline to online model training api
 
 ## [1.0.0] - 2024-04-30
 - handout: document end point for previous runs

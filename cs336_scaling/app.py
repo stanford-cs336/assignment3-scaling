@@ -3,8 +3,8 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI
-from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 
 from cs336_scaling.api.internal import router as internal_router
 from cs336_scaling.api.public import router as public_router
@@ -32,6 +32,8 @@ def create_app() -> FastAPI:
             "http://127.0.0.1:8000",
             "http://localhost:8080",
             "http://127.0.0.1:8080",
+            "http://hyperturing.stanford.edu:8000",
+            "http://172.24.75.170:8000",
         ],
         allow_methods=["GET", "POST", "OPTIONS"],
         allow_headers=["X-API-Key", "Content-Type"],

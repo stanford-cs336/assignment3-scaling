@@ -602,7 +602,7 @@
   </div>
   <div class="settings">
     <label>API
-      <input id="apiUrl" type="url" placeholder="http://172.24.75.170:8000" />
+      <input id="apiUrl" type="url" placeholder="http://hyperturing.stanford.edu:8000" />
     </label>
     <label>Key
       <input id="apiKey" type="password" class="short" placeholder="8-char ID" />
@@ -787,7 +787,7 @@ const LS = {
   status: "expdash.statusFilter",
   sort:   "expdash.sort",
 };
-const DEFAULT_URL = "http://172.24.75.170:8000";
+const DEFAULT_URL = "http://hyperturing.stanford.edu:8000";
 
 const state = {
   apiUrl: localStorage.getItem(LS.url) || DEFAULT_URL,
@@ -947,6 +947,7 @@ function statusOf(exp) { return exp?.status?.status_type ?? "unknown"; }
 function lossesOf(exp) {
   const s = exp?.status;
   if (!s) return [];
+  if (s.status_type === "running") return s.val_losses ?? [];
   if (s.status_type === "completed") return s.val_losses ?? [];
   if (s.status_type === "failed" && s.reason?.reason === "timeout") return s.reason.partial_val_losses ?? [];
   return [];
